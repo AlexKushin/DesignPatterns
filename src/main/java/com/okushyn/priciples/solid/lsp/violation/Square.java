@@ -1,4 +1,4 @@
-package com.okushyn.priciples.solid.lsp_violation;
+package com.okushyn.priciples.solid.lsp.violation;
 
 public class Square extends Rectangle {
 

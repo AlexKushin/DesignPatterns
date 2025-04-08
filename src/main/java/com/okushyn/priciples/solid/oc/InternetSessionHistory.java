@@ -41,10 +41,11 @@ public class InternetSessionHistory {
         }
 
     }
+
     private static final Map<Long, List<InternetSession>> SESSIONS = new HashMap<>();
 
     public synchronized static List<InternetSession> getCurrentSessions(Long subscriberId) {
-        if(!SESSIONS.containsKey(subscriberId)) {
+        if (!SESSIONS.containsKey(subscriberId)) {
             return Collections.emptyList();
         }
         return SESSIONS.get(subscriberId);
@@ -52,7 +53,7 @@ public class InternetSessionHistory {
 
     public synchronized static void addSession(Long subscriberId, LocalDateTime begin, long dataUsed) {
         List<InternetSession> sessions;
-        if(!SESSIONS.containsKey(subscriberId)) {
+        if (!SESSIONS.containsKey(subscriberId)) {
             sessions = new LinkedList<>();
             SESSIONS.put(subscriberId, sessions);
         } else {

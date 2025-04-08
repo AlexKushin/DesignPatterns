@@ -1,4 +1,6 @@
-package com.okushyn.priciples.solid.lsp_violation;
+package com.okushyn.priciples.solid.lsp_fixed;
+
+
 
 public class Main {
 
@@ -12,7 +14,7 @@ public class Main {
 
         useRectangle(rectangle);
 
-        useRectangle(square);
+       // useRectangle(square);
 
     }
 
@@ -25,6 +27,7 @@ public class Main {
         if(rectangle.getWidth() != 30){
             System.out.println("Width Not equal to 30");
         }
+        System.out.println();
     }
 }
 

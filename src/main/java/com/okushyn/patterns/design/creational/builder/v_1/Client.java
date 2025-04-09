@@ -9,6 +9,16 @@ public class Client {
 
     }
 
+    //Director
+    private static UserDTO directBuild(UserDTOBuilder builder, User user) {
+        return builder
+                .withFirstName(user.getFirstName())
+                .withLastName(user.getLastName())
+                .withAddress(user.getAddress())
+                .withBirthday(user.getBirthday())
+                .build();
+    }
+
     /**
      * Returns a sample user.
      */

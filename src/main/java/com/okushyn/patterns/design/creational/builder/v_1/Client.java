@@ -6,7 +6,10 @@ import java.time.LocalDate;
 public class Client {
 
     public static void main(String[] args) {
-
+        User user = createUser();
+        UserDTOBuilder dtoBuilder = new UserWebDTOBuilder();
+        UserDTO dto = directBuild(dtoBuilder, user);
+        System.out.println(dto);
     }
 
     //Director

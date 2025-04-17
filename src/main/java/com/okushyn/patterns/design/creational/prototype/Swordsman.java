@@ -14,4 +14,8 @@ public class Swordsman extends GameUnit {
         return "Swordsman " + state + " @ " + getPosition();
     }
 
+    @Override
+    public void reset() {
+        state = "idle";
+    }
 }

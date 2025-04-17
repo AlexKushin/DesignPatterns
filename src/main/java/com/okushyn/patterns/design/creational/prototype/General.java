@@ -10,6 +10,16 @@ public class General extends GameUnit {
     }
 
     @Override
+    public GameUnit clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException("Generals are unique");
+    }
+
+    @Override
+    public void reset() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
     public String toString() {
         return "General " + state + " @ " + getPosition();
     }

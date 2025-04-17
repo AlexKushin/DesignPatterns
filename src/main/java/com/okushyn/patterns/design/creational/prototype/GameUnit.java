@@ -3,7 +3,7 @@ package com.okushyn.patterns.design.creational.prototype;
 /**
  * This class represents an abstract prototype & defines the clone method
  */
-public abstract class GameUnit {
+public abstract class GameUnit implements Cloneable {
 
     private Point3D position;
 
@@ -24,4 +24,17 @@ public abstract class GameUnit {
     public Point3D getPosition() {
         return position;
     }
+
+    public GameUnit clone() throws CloneNotSupportedException {
+        GameUnit unit = (GameUnit) super.clone();
+        unit.initialize();
+        return unit;
+    }
+
+    public void initialize() {
+        position = Point3D.ZERO;
+        reset();
+    }
+
+    public abstract void reset();
 }
